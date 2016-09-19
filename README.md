@@ -8,7 +8,7 @@
     普通员工的功能包括：系统自动完成普通员工每天上下班的考勤记录，员工可以查看工资及3天内的考勤打卡情况，如果发现考勤与实际不符，可以提交申请给经理处理。
     经理继承员工的功能，不同之处在于：能增加员工，审核员工的考勤申请以及查看员工的工资。但经理不能申请考勤修改。
     Quartz配合cron触发器实现系统定时执行任务。
-##二.功能模块
+##二.相关技术介绍
 ###  1.传统表现层:JSP
     本系统使用JSP作为表现层，负责手机用户的请求数据，以及业务数据的展示。
 ###  2.MVC框架
@@ -27,3 +27,22 @@
 ###  service：业务逻辑处理，实现manager和employee两个业务逻辑组件的功能，面向DAO层编程。
 ###  vo
 ###  web：验证码实现
+##四.系统的功能模块
+###  7个DAO组件及对应的7个持久化类
+     ApplicationDao：提供对app_table表的操作
+     application普通员工的考勤申请，包括申请理由，是否被批复及申请改变的类型等属性。
+     AttendDao：提供对attend_table表的操作
+     attend对应每天的考勤，包含考勤时间，考勤员工，是否上班及考勤类别等信息。
+     AttendTypeDao：提供对type_table表的操作
+     AttendType对应考勤的类别，包含考勤名称的如迟到，早退等名称。
+     CheckBackDao：提供对check_table表的操作
+     CheckBack对应批复，包含批复对应的申请，是否通过申请，由哪个经理完成批复等属性。
+     EmployeeDao：提供对emp_table表的操作
+     Employee对应系统的员工信息，包含员工的用户名，密码，工资，以及对应的经理的属性。
+     ManagerDao：提供对mgr_table表的操作
+     Manager对应系统的经理信息，由于继承了Employee，只需添加管理部门名的属性即可。
+     PaymentDao：提供对pay_table表的操作
+     Pay对应每月所发的薪水信息，包含薪水所发的月份，领薪的员工及薪资等属性。
+     2个业务逻辑层
+     EmpManager：提供Employee角色所需业务的逻辑功能实现
+     MgrManager：提供Manager角色所需业务的逻辑功能实现
