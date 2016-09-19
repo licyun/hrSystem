@@ -43,6 +43,16 @@
     Manager对应系统的经理信息，由于继承了Employee，只需添加管理部门名的属性即可。
     PaymentDao：提供对pay_table表的操作
     Pay对应每月所发的薪水信息，包含薪水所发的月份，领薪的员工及薪资等属性。
-    2个业务逻辑层
+    
+###2个业务逻辑层
     EmpManager：提供Employee角色所需业务的逻辑功能实现
     MgrManager：提供Manager角色所需业务的逻辑功能实现
+    
+###daoContext.xml
+    为DAO组件注入sessionFactory
+
+###applicationContext.xml
+    定义数据源连接池，并注入给sessionfactory
+    配置局部事务
+    为业务逻辑组件注入DAO组件
+    定义触发器，指定执行时间，并为之注入业务逻辑组件。
