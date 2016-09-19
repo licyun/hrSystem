@@ -25,7 +25,7 @@
     exception：系统异常处理
     schedule：quartz定时执行考勤记录和工资发放模块。
     service：业务逻辑处理，实现manager和employee两个业务逻辑组件的功能，面向DAO层编程。
-    vo
+    vo：hibernate的po用在数据层，vo则用在逻辑层。用来作为逻辑层的值传递。
     web：验证码实现
 ##四.系统的功能模块
 ###  7个DAO组件及对应的7个持久化类
