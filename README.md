@@ -19,18 +19,11 @@
 ###  4.hibernate
     Hibernate作为orm框架，封装了JDBC，以面向对象的方式操作数据库。为底层DAO的实现提供了支持。
 ##三.系统结构
-###  action
-    控制系统的url及表现等数据的请求处理。保证系统的安全性。
-###  dao 
-    封装hibernate持久层，每个DAO都对应包含数据库的逻辑访问，可对一个数据库表完成基本的CRUD操作。
-###  domain
-    hibernate持久层，完成持久层的建立及对应表的映射规则。
-###  exception
-    系统异常处理
-###  schedule
-    quartz定时执行考勤记录和工资发放模块。
-###  service
-    业务逻辑处理，实现manager和employee两个业务逻辑组件的功能，面向DAO层编程。
+###  action：控制系统的url及表现等数据的请求处理。保证系统的安全性。
+###  dao：封装hibernate持久层，每个DAO都对应包含数据库的逻辑访问，可对一个数据库表完成基本的CRUD操作。
+###  domain：hibernate持久层，完成持久层的建立及对应表的映射规则。
+###  exception：系统异常处理
+###  schedule：quartz定时执行考勤记录和工资发放模块。
+###  service：业务逻辑处理，实现manager和employee两个业务逻辑组件的功能，面向DAO层编程。
 ###  vo
-###  web
-    验证码实现
+###  web：验证码实现
