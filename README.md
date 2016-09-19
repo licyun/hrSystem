@@ -1,4 +1,6 @@
 #struts2 spring hibernate 实现的简单员工管理系统
+###源码来自疯狂JAVA一书第三版最后一个大项目，仔细研读了其中的源码，了解了一个SSH项目的基本结构。
+###理解了hibernate层，DAO层，业务逻辑层以及struts控制，spring注入的原理
 ##演示站[简单的员工定时管理系统](http://java.licyun.com/hrSystem/)
     经理帐号：oracle weblogic
     员工帐号：mysql hsql tomcat jetty
