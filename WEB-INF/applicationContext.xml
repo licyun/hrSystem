@@ -20,7 +20,7 @@
 		p:driverClass="com.mysql.jdbc.Driver"
 		p:jdbcUrl="jdbc:mysql://localhost:3306/hrSystem?useUnicode=true&amp;characterEncoding=UTF-8"
 		p:user="root"
-		p:password="licyun."
+		p:password="youpasswd"
 		p:maxPoolSize="40"
 		p:minPoolSize="1"
 		p:initialPoolSize="1"
